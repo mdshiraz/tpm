@@ -1,273 +1,175 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scrum Master Interview FAQs | Agile & Scrum Scenarios</title>
-  <meta name="description" content="Prepare for Scrum Master interviews with real-world Agile & Scrum scenario-based FAQs. Practical answers to help you stand out in interviews at Wipro, Infosys, TCS, and more.">
-  <meta name="keywords" content="Scrum Master interview questions, Agile interview, Scrum scenario questions, Wipro interview, Infosys Scrum Master, TCS Agile interview, sprint commitment questions">
-  <meta name="author" content="Mohammad Shiraz Anwar">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scrum Master FAQs — Practical Answers (Scenario-Based)</title>
+  <meta name="description" content="Scenario-based Scrum Master FAQs: practical answers to common interview and real-world questions about sprint commitments, retrospectives, stakeholder alignment, and more." />
+  <meta name="keywords" content="Scrum Master FAQ, Agile interview questions, sprint commitments, retrospectives, Scrum Master metrics" />
+  <meta name="author" content="Mohammad Shiraz Anwar" />
 
-  <!-- Open Graph / LinkedIn / Facebook -->
-  <meta property="og:title" content="Scrum Master Interview FAQs | Agile & Scrum Scenarios">
-  <meta property="og:description" content="Practical Scrum Master interview questions with answers based on real-world Agile scenarios. Perfect for Wipro, Infosys, TCS, and more.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourwebsite.com/scrum-master-faq">
-  <meta property="og:image" content="https://yourwebsite.com/images/scrum-faq-cover.jpg">
+  <!-- Open Graph (LinkedIn / Facebook) -->
+  <meta property="og:title" content="Scrum Master FAQs — Practical Answers (Scenario-Based)" />
+  <meta property="og:description" content="Practical, experience-backed answers to common Scrum Master and Agile scenario questions (sprint commitments, retrospectives, stakeholder alignment and more)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourwebsite.com/scrum-master-faq" />
+  <meta property="og:image" content="https://yourwebsite.com/images/scrum-faq-cover.jpg" />
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Scrum Master Interview FAQs | Agile & Scrum Scenarios">
-  <meta name="twitter:description" content="Prepare for Scrum Master interviews with real-world Agile & Scrum FAQs. Practical answers for success.">
-  <meta name="twitter:image" content="https://yourwebsite.com/images/scrum-faq-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Scrum Master FAQs — Practical Answers (Scenario-Based)" />
+  <meta name="twitter:description" content="Practical, experience-backed answers to common Scrum Master and Agile scenario questions." />
+  <meta name="twitter:image" content="https://yourwebsite.com/images/scrum-faq-cover.jpg" />
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #ffffff;
-      color: #333;
-      line-height: 1.6;
+    :root{
+      --bg:#fff;
+      --muted:#6b7280;
+      --text:#111827;
+      --card:#f8fafc;
+      --accent:#1565d8;
+      --border:#e6eefc;
+      --radius:10px;
     }
-    header {
-      background-color: #0073e6;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-    }
-    .container {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 20px;
-    }
-    .intro {
-      margin-bottom: 30px;
-    }
-    .faq {
-      margin-bottom: 20px;
-    }
-    .faq h3 {
-      background: #f4f4f4;
-      padding: 10px;
-      border-left: 4px solid #0073e6;
-      cursor: pointer;
-      margin: 0;
-    }
-    .faq p {
-      padding: 10px;
-      display: none;
-      border: 1px solid #ddd;
-      border-top: none;
-    }
-    .faq.active p {
-      display: block;
-    }
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;}
+    .wrap{max-width:940px;margin:36px auto;padding:24px;}
+    header{padding:18px 0;border-bottom:1px solid #eef2ff}
+    header h1{margin:0;font-size:1.6rem}
+    header p{margin:8px 0 0;color:var(--muted)}
+    .intro{margin:18px 0 26px;font-size:1rem;color:var(--muted)}
+    .faqs{display:grid;gap:12px}
+    details{background:var(--card);border:1px solid var(--border);padding:14px;border-radius:var(--radius);transition:box-shadow .15s}
+    details[open]{box-shadow:0 6px 18px rgba(21,101,216,0.08);border-color:rgba(21,101,216,0.12)}
+    summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;padding:6px 0;font-weight:600;font-size:1rem}
+    summary::-webkit-details-marker{display:none}
+    .qnum{color:var(--accent);font-weight:700}
+    .answer{margin-top:10px;padding-right:6px;color:#1f2937}
+    footer{margin-top:26px;color:var(--muted);font-size:0.95rem;text-align:center}
+    @media (max-width:600px){.wrap{padding:16px}}
   </style>
 </head>
 <body>
-  <header>
-    <h1>Scrum Master Interview FAQs</h1>
-    <p>Practical, scenario-based questions and answers to help you prepare effectively.</p>
-  </header>
+  <div class="wrap">
+    <header>
+      <h1>Scrum Master FAQs</h1>
+      <p>Concise, scenario-based answers to the common questions interviewers and teams ask most often.</p>
+    </header>
 
-  <div class="container">
     <div class="intro">
-      <p>
-        Scrum Master interviews often test your ability to handle <strong>real-world Agile challenges</strong> rather than just theory. 
-        Below are some of the most common <strong>scenario-based interview questions</strong> (often asked in companies like Wipro, Infosys, and TCS), 
-        with practical answers to help you stand out.
-      </p>
+      These FAQs are taken from a real interview-style list and rewritten as short, practical answers you can publish on your site or use when preparing for Scrum Master interviews.
     </div>
 
-    <!-- FAQ 1 -->
-    <div class="faq">
-      <h3>1. How do you ensure your team remains motivated during long and complex projects?</h3>
-      <p>I focus on celebrating small wins, maintaining transparency, and ensuring work is meaningful. Regular check-ins, feedback sessions, and giving autonomy help sustain motivation throughout long projects.</p>
-    </div>
+    <section class="faqs" aria-label="Frequently asked Scrum Master questions">
 
-    <!-- FAQ 2 -->
-    <div class="faq">
-      <h3>2. What would you do if your team consistently misses sprint commitments?</h3>
-      <p>I would analyze patterns, ensure stories are well-refined and right-sized, and encourage committing based on velocity rather than optimism. The goal is to improve predictability rather than chase stretch goals.</p>
-    </div>
+      <details>
+        <summary><span class="qnum">1.</span> How do you ensure your team remains motivated during long and complex projects?</summary>
+        <div class="answer">
+          Celebrate small wins, keep progress visible, and connect day-to-day work to the product vision. Protect a sustainable pace, recognize contributions publicly, and give the team autonomy over how they deliver.
+        </div>
+      </details>
 
-    <!-- FAQ 3 -->
-    <div class="faq">
-      <h3>3. How do you handle conflicts between Product Owner and Development Team?</h3>
-      <p>I act as a neutral facilitator, ensuring both sides are heard. I focus discussions on customer value, transparency, and data to reach alignment instead of personal opinions.</p>
-    </div>
+      <details>
+        <summary><span class="qnum">2.</span> What would you do if your team consistently misses sprint commitments?</summary>
+        <div class="answer">
+          Treat missed commitments as feedback. Break stories into smaller pieces, plan from historical velocity, add buffer for unknowns, surface blockers early, and use retros to identify root causes. Commit to realistic forecasts rather than stretch goals.
+        </div>
+      </details>
 
-    <!-- FAQ 4 -->
-    <div class="faq">
-      <h3>4. What steps do you take when priorities change mid-sprint?</h3>
-      <p>I protect the sprint goal and team focus. If changes are critical, I collaborate with the Product Owner to decide whether to stop the sprint and replan, ensuring transparency with stakeholders.</p>
-    </div>
+      <details>
+        <summary><span class="qnum">3.</span> How do you handle situations where the Product Owner is unavailable for backlog refinement?</summary>
+        <div class="answer">
+          Reinforce the PO's role and schedule regular refinement time. If the PO is unavailable, work with proxy stakeholders (BA/SME), document assumptions, and validate decisions with the PO as soon as possible to avoid rework.
+        </div>
+      </details>
 
-    <!-- FAQ 5 -->
-    <div class="faq">
-      <h3>5. How do you support a new team that struggles with Agile adoption?</h3>
-      <p>I start with education and coaching, introducing Agile practices gradually. I focus on creating psychological safety so team members feel comfortable experimenting and learning.</p>
-    </div>
+      <details>
+        <summary><span class="qnum">4.</span> How do you deal with team members who resist Agile practices?</summary>
+        <div class="answer">
+          Listen to their concerns, explain the "why", and run small experiments that demonstrate benefits (faster feedback, reduced rework). Use coaching, evidence, and invite them to design improvements so they feel ownership.
+        </div>
+      </details>
 
-    <!-- FAQ 6 -->
-    <div class="faq">
-      <h3>6. How do you deal with a dominant team member who overshadows others?</h3>
-      <p>I use facilitation techniques to ensure equal participation, like round-robin discussions. Privately, I coach the dominant member to recognize the importance of balanced collaboration.</p>
-    </div>
+      <details>
+        <summary><span class="qnum">5.</span> What approach do you take when the team delivers quality work but the stakeholders are still unhappy?</summary>
+        <div class="answer">
+          Explore the gap between delivery and expectations—clarify acceptance criteria and Definition of Done, increase demo cadence, and align priorities with stakeholders to ensure work delivers expected value.
+        </div>
+      </details>
 
-    <!-- FAQ 7 -->
-    <div class="faq">
-      <h3>7. How do you ensure continuous improvement in your team?</h3>
-      <p>I make retrospectives actionable, track improvements, and celebrate progress. I also use data (like lead time, velocity trends) to drive discussions and measure impact.</p>
-    </div>
+      <details>
+        <summary><span class="qnum">6.</span> How would you coach a team that treats daily stand-ups like status update meetings?</summary>
+        <div class="answer">
+          Reframe the stand-up as a coordination tool: focus on what was done, what will be done, and blockers. Encourage peer-to-peer problem solving, keep it timeboxed, and model facilitation that drives collaboration rather than reporting.
+        </div>
+      </details>
 
-    <!-- FAQ 8 -->
-    <div class="faq">
-      <h3>8. How do you manage dependencies in a scaled environment?</h3>
-      <p>I promote early identification of dependencies during backlog refinement, use visual tools like dependency boards, and coordinate with other Scrum Masters to align delivery plans.</p>
-    </div>
+      <details>
+        <summary><span class="qnum">7.</span> How do you balance between delivery pressure from management and protecting the team's sustainable pace?</summary>
+        <div class="answer">
+          Use data (velocity, cycle time, defect trends) to show long-term cost of overload. Negotiate scope or timelines instead of overtime, propose MVP approaches, and advocate for predictable delivery to build stakeholder trust.
+        </div>
+      </details>
 
-    <!-- FAQ 9 -->
-    <div class="faq">
-      <h3>9. How do you handle stakeholders pushing for unrealistic deadlines?</h3>
-      <p>I use transparency: show velocity, backlog, and delivery forecasts. I negotiate scope instead of time, ensuring we deliver value without burning out the team.</p>
-    </div>
+      <details>
+        <summary><span class="qnum">8.</span> What steps do you take to improve collaboration between developers and testers in the same team?</summary>
+        <div class="answer">
+          Involve testers early in refinement, encourage pairing and swarming, share ownership of quality, and invest in test automation and practices like BDD to remove handoffs and reduce rework.
+        </div>
+      </details>
 
-    <!-- FAQ 10 -->
-    <div class="faq">
-      <h3>10. How do you handle a situation where team members lack required skills?</h3>
-      <p>I encourage pair programming, knowledge sharing, and targeted upskilling. I also bring in external support if needed while ensuring long-term capability building within the team.</p>
-    </div>
+      <details>
+        <summary><span class="qnum">9.</span> How do you ensure continuous improvement when the team is unwilling to discuss failures in retrospectives?</summary>
+        <div class="answer">
+          Build psychological safety first: start with wins, allow anonymous inputs, use structured retrospective formats that lower risk, and run small, reversible experiments to rebuild trust and openness.
+        </div>
+      </details>
 
-    <!-- FAQ 11 -->
-    <div class="faq">
-      <h3>11. How do you measure success as a Scrum Master?</h3>
-      <p>I measure success by the team’s ability to deliver predictably, improve continuously, collaborate effectively, and create customer value. My role is successful when the team is self-organizing.</p>
-    </div>
+      <details>
+        <summary><span class="qnum">10.</span> How do you deal with external dependencies that repeatedly block your sprint progress?</summary>
+        <div class="answer">
+          Make dependencies visible, document SLA/lead times, escalate chronic blockers, and work to reduce dependency risk through cross-skilling, better sequencing, or architectural changes. Adjust sprint commitments when dependencies exist.
+        </div>
+      </details>
 
-    <!-- FAQ 12 -->
-    <div class="faq">
-      <h3>12. How do you keep remote/distributed teams engaged?</h3>
-      <p>I use engaging online collaboration tools, keep ceremonies interactive, encourage video-on for better connection, and focus on building trust and informal interactions beyond work.</p>
-    </div>
+      <details>
+        <summary><span class="qnum">11.</span> What metrics do you track as a Scrum Master, and how do you use them to improve team performance?</summary>
+        <div class="answer">
+          I track velocity, sprint predictability (% committed vs delivered), cycle time/lead time, WIP, and defect trends. Use metrics to spot bottlenecks and guide improvement conversations—not to grade individuals.
+        </div>
+      </details>
 
+      <details>
+        <summary><span class="qnum">12.</span> How do you handle a situation where a senior developer dominates sprint planning discussions and overshadows others?</summary>
+        <div class="answer">
+          Facilitate balanced participation (round-robin, silent brainstorming), invite quieter voices, and coach the senior privately on inclusive behavior. Set ground rules so planning benefits from diverse perspectives.
+        </div>
+      </details>
+
+    </section>
+
+    <footer>
+      Want changes to tone, length, or branding (logo/colors)? Tell me the brand color and I will adjust the CSS.
+    </footer>
   </div>
 
-  <script>
-    // Accordion toggle
-    document.querySelectorAll('.faq h3').forEach(item => {
-      item.addEventListener('click', () => {
-        item.parentElement.classList.toggle('active');
-      });
-    });
-  </script>
-
-  <!-- JSON-LD Structured Data for FAQPage -->
+  <!-- Full FAQ JSON-LD for SEO (all 12 questions) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do you ensure your team remains motivated during long and complex projects?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I focus on celebrating small wins, maintaining transparency, and ensuring work is meaningful. Regular check-ins, feedback sessions, and giving autonomy help sustain motivation throughout long projects."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What would you do if your team consistently misses sprint commitments?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I would analyze patterns, ensure stories are well-refined and right-sized, and encourage committing based on velocity rather than optimism. The goal is to improve predictability rather than chase stretch goals."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do you handle conflicts between Product Owner and Development Team?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I act as a neutral facilitator, ensuring both sides are heard. I focus discussions on customer value, transparency, and data to reach alignment instead of personal opinions."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What steps do you take when priorities change mid-sprint?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I protect the sprint goal and team focus. If changes are critical, I collaborate with the Product Owner to decide whether to stop the sprint and replan, ensuring transparency with stakeholders."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do you support a new team that struggles with Agile adoption?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I start with education and coaching, introducing Agile practices gradually. I focus on creating psychological safety so team members feel comfortable experimenting and learning."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do you deal with a dominant team member who overshadows others?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I use facilitation techniques to ensure equal participation, like round-robin discussions. Privately, I coach the dominant member to recognize the importance of balanced collaboration."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do you ensure continuous improvement in your team?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I make retrospectives actionable, track improvements, and celebrate progress. I also use data (like lead time, velocity trends) to drive discussions and measure impact."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do you manage dependencies in a scaled environment?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I promote early identification of dependencies during backlog refinement, use visual tools like dependency boards, and coordinate with other Scrum Masters to align delivery plans."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do you handle stakeholders pushing for unrealistic deadlines?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I use transparency: show velocity, backlog, and delivery forecasts. I negotiate scope instead of time, ensuring we deliver value without burning out the team."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do you handle a situation where team members lack required skills?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I encourage pair programming, knowledge sharing, and targeted upskilling. I also bring in external support if needed while ensuring long-term capability building within the team."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do you measure success as a Scrum Master?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I measure success by the team’s ability to deliver predictably, improve continuously, collaborate effectively, and create customer value. My role is successful when the team is self-organizing."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do you keep remote/distributed teams engaged?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I use engaging online collaboration tools, keep ceremonies interactive, encourage video-on for better connection, and focus on building trust and informal interactions beyond work."
-        }
-      }
+      {"@type":"Question","name":"How do you ensure your team remains motivated during long and complex projects?","acceptedAnswer":{"@type":"Answer","text":"Celebrate small wins, keep progress visible, and connect day-to-day work to the product vision. Protect a sustainable pace, recognize contributions, and give autonomy."}},
+      {"@type":"Question","name":"What would you do if your team consistently misses sprint commitments?","acceptedAnswer":{"@type":"Answer","text":"Treat missed commitments as feedback. Break stories smaller, plan from historical velocity, add buffer, surface blockers early, and use retros to find root causes."}},
+      {"@type":"Question","name":"How do you handle situations where the Product Owner is unavailable for backlog refinement?","acceptedAnswer":{"@type":"Answer","text":"Reinforce the PO's role and schedule regular refinement. Use proxy stakeholders or documented assumptions when necessary and validate with the PO later."}},
+      {"@type":"Question","name":"How do you deal with team members who resist Agile practices?","acceptedAnswer":{"@type":"Answer","text":"Listen to concerns, explain the 'why', run small experiments that show value, and coach with practical examples so resistance reduces over time."}},
+      {"@type":"Question","name":"What approach do you take when the team delivers quality work but the stakeholders are still unhappy?","acceptedAnswer":{"@type":"Answer","text":"Uncover the expectation gap, clarify acceptance criteria and Definition of Done, increase transparency through demos, and realign priorities with stakeholders."}},
+      {"@type":"Question","name":"How would you coach a team that treats daily stand-ups like status update meetings?","acceptedAnswer":{"@type":"Answer","text":"Reframe stand-ups as coordination: focus on what was done, what will be done, and blockers. Encourage peer-to-peer collaboration and keep it timeboxed."}},
+      {"@type":"Question","name":"How do you balance between delivery pressure from management and protecting the team's sustainable pace?","acceptedAnswer":{"@type":"Answer","text":"Use data (velocity, cycle time, defect trends) to show the cost of overload, negotiate scope or timelines, and advocate for predictable, sustainable delivery."}},
+      {"@type":"Question","name":"What steps do you take to improve collaboration between developers and testers in the same team?","acceptedAnswer":{"@type":"Answer","text":"Involve QA early, encourage pairing and shared ownership of quality, adopt shift-left practices, and invest in automation and BDD where appropriate."}},
+      {"@type":"Question","name":"How do you ensure continuous improvement when the team is unwilling to discuss failures in retrospectives?","acceptedAnswer":{"@type":"Answer","text":"Build psychological safety: start with wins, allow anonymous input, use structured retrospective formats, and run small experiments to create positive change."}},
+      {"@type":"Question","name":"How do you deal with external dependencies that repeatedly block your sprint progress?","acceptedAnswer":{"@type":"Answer","text":"Make dependencies visible, document lead times and SLAs, escalate chronic blockers, and reduce risk through cross-skilling, better sequencing, or architectural changes."}},
+      {"@type":"Question","name":"What metrics do you track as a Scrum Master, and how do you use them to improve team performance?","acceptedAnswer":{"@type":"Answer","text":"Track velocity, sprint predictability, cycle time/lead time, WIP and defect trends. Use these metrics to identify bottlenecks and guide improvement—not to judge individuals."}},
+      {"@type":"Question","name":"How do you handle a situation where a senior developer dominates sprint planning discussions and overshadows others?","acceptedAnswer":{"@type":"Answer","text":"Use facilitation techniques (round-robin, silent brainstorming) to ensure equal participation, invite quieter voices, and coach the senior in private on inclusive behavior."}}
     ]
   }
   </script>

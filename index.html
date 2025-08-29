@@ -1,7 +1,239 @@
-<html>
-<body>
-<h1>HELLO TPM</h1>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scrum Master FAQs — Practical Answers from Experience</title>
+  <meta name="description" content="A concise FAQ for Scrum Masters and Agile leaders: practical answers to common interview and real-world scenarios, based on hands-on experience." />
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#11162a;
+      --text:#e9eefc;
+      --muted:#aab4d6;
+      --accent:#7aa2ff;
+      --border:#1d2542;
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial;}
+    .wrap{max-width:860px;margin:auto;padding:40px 20px;}
+    header h1{font-size:2rem;line-height:1.2;margin:0 0 12px;}
+    header p{margin:0;color:var(--muted);}
+    .note{margin-top:18px;font-size:0.95rem;color:var(--muted)}
+    .faq{margin-top:28px;display:grid;gap:14px}
+    details{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:0 18px}
+    summary{cursor:pointer;list-style:none;padding:16px 0;font-weight:600}
+    summary::-webkit-details-marker{display:none}
+    details[open]{outline:2px solid color-mix(in oklab, var(--accent) 35%, white)}
+    .a{padding:0 0 18px;color:var(--text)}
+    .q-num{color:var(--accent);margin-right:8px}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    footer{margin-top:36px;color:var(--muted);font-size:0.9rem}
+  </style>
 
-  
+  <!-- FAQ Schema for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do you ensure your team remains motivated during long and complex projects?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Celebrate small wins, keep progress visible, and connect day-to-day work to the product vision. Maintain a sustainable pace, recognize contributions, and give autonomy over how goals are achieved."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What would you do if your team consistently misses sprint commitments?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Treat it as feedback, not failure. Break work into smaller, clearer stories, plan from historical velocity, and include buffer for unknowns. Use commitments as realistic forecasts—not stretch goals—to build predictability and trust."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you handle situations where the Product Owner is unavailable for backlog refinement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Clarify the PO’s critical role and secure their availability. When unavailable, proceed with refinement using documented assumptions and proxy stakeholders, then validate decisions with the PO to avoid misalignment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you deal with team members who resist Agile practices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Listen to concerns, explain the 'why', and run small, low-risk experiments that show benefits (faster feedback, less rework). Coach through examples and let results reduce resistance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What approach do you take when the team delivers quality work but stakeholders are still unhappy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Surface unmet expectations, improve transparency, and align on Definition of Done and acceptance criteria. Close the gap with regular demos, feedback loops, and priority alignment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How would you coach a team that treats daily stand-ups like status update meetings?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Refocus the stand-up on team coordination: what was done, what’s next, and blockers. Encourage peer-to-peer updates, keep it timeboxed, and use facilitation techniques to make it collaborative."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you balance delivery pressure from management with protecting a sustainable pace?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use data (velocity, defects, cycle time) to show the cost of unsustainable pace. Negotiate scope, sequencing, or timelines rather than overtime. Sustainable delivery outperforms heroics over time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What steps improve collaboration between developers and testers in the same team?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Involve QA early in refinement, pair on implementation and exploratory testing, share ownership of quality, and adopt practices like BDD and test automation to break silos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you ensure continuous improvement when the team avoids discussing failures in retrospectives?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Build psychological safety. Start with wins, allow anonymous input, and frame topics as improvement opportunities. Use facilitation formats that lower risk and iterate on small experiments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you deal with external dependencies that repeatedly block sprint progress?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Make dependencies visible, plan around lead times, and escalate chronic blockers. Reduce exposure by building cross-functional skills or adjusting architecture. Commit realistically when dependencies are unavoidable."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What metrics do you track as a Scrum Master and how do you use them?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Track velocity, cycle time, lead time, WIP, and defect trends. Use metrics to reveal bottlenecks and guide conversations—never to judge individuals."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you handle a senior developer dominating sprint planning and overshadowing others?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Facilitate balanced participation (round-robin, silent brainstorming), invite quieter voices, and coach the senior privately on inclusive leadership and the value of diverse perspectives."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Scrum Master FAQs</h1>
+      <p>Practical, experience-backed answers to the questions teams and interviewers ask most often. Use this as a guide for real-world delivery and as a reference for coaching conversations.</p>
+      <p class="note">These answers reflect a leadership approach that values predictability, transparency, and sustainable pace over short-term heroics.</p>
+    </header>
+
+    <section class="faq" aria-label="Frequently Asked Questions">
+      <details>
+        <summary><span class="q-num">1.</span>How do you ensure your team remains motivated during long and complex projects?</summary>
+        <div class="a">
+          I keep motivation high by celebrating small wins, maintaining visible progress, and linking daily work to the product vision. We protect a sustainable pace, recognize contributions, and give autonomy in how goals are met.
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="q-num">2.</span>What would you do if your team consistently misses sprint commitments?</summary>
+        <div class="a">
+          Missing commitments is feedback, not failure. We break work smaller, plan from historical velocity, and add buffer for unknowns. Commitments become realistic forecasts, not stretch goals—improving predictability and trust.
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="q-num">3.</span>How do you handle situations where the Product Owner is unavailable for backlog refinement?</summary>
+        <div class="a">
+          Reinforce the PO’s critical role and secure their time. If unavailable, continue with documented assumptions and proxy stakeholders (BA/SME), then validate decisions with the PO to prevent misalignment.
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="q-num">4.</span>How do you deal with team members who resist Agile practices?</summary>
+        <div class="a">
+          Listen first. Explain the “why,” then run small experiments that show concrete benefits—faster feedback, less rework. Use coaching and evidence to let outcomes reduce resistance.
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="q-num">5.</span>The team delivers quality work, but stakeholders are unhappy—what do you do?</summary>
+        <div class="a">
+          Uncover unmet expectations and improve transparency. Align on Definition of Done and acceptance criteria, increase feedback via demos, and reset priorities together to close the expectations gap.
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="q-num">6.</span>How would you coach a team that treats daily stand-ups like status updates?</summary>
+        <div class="a">
+          Reframe stand-ups as coordination, not reporting: what was done, what’s next, and blockers. Encourage peer-to-peer updates, keep it time-boxed, and facilitate actively to keep it collaborative.
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="q-num">7.</span>How do you balance delivery pressure from management with a sustainable pace?</summary>
+        <div class="a">
+          Use data (velocity, cycle time, defect trends) to show the cost of overloading. Negotiate scope, sequence, or timelines instead of overtime. Sustainable delivery consistently beats heroics.
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="q-num">8.</span>What steps improve collaboration between developers and testers?</summary>
+        <div class="a">
+          Involve QA early in refinement, pair on implementation and exploratory testing, share ownership of quality, and adopt BDD and test automation to remove silos.
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="q-num">9.</span>How do you ensure continuous improvement when the team avoids discussing failures?</summary>
+        <div class="a">
+          Build psychological safety. Start with wins, allow anonymous input, and frame topics as opportunities. Use facilitation formats that lower risk and run small, reversible experiments.
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="q-num">10.</span>How do you handle external dependencies that block sprint progress?</summary>
+        <div class="a">
+          Make dependencies visible, plan around lead times, and escalate chronic blockers. Reduce dependency risk via cross-functional skills or architectural changes; commit realistically when they’re unavoidable.
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="q-num">11.</span>What metrics do you track as a Scrum Master, and how do you use them?</summary>
+        <div class="a">
+          Velocity, cycle time, lead time, WIP, and defect trends. Metrics inform conversations about flow and bottlenecks—they’re never used to judge individuals.
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="q-num">12.</span>How do you handle a senior developer dominating sprint planning?</summary>
+        <div class="a">
+          Use facilitation to balance participation (round-robin, silent brainstorming, time-boxing) and invite quieter voices. Coach the senior privately on inclusive leadership and why diverse input improves outcomes.
+        </div>
+      </details>
+    </section>
+
+    <footer>
+      Have a question you don’t see here? <a href="#contact">Contact us</a> and we’ll add it.
+    </footer>
+  </div>
 </body>
 </html>
